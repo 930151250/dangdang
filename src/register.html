@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register.css">
+
+</head>
+
+<body>
+    <div class="head">
+        <div class="wrap">
+
+            <div class="wrap-logo">
+                <a href="javascript:;"><img src="../img/logo.png" alt=""></a>
+
+            </div>
+            <div class="wrap-right">
+                <div class="wrap-right-top">
+                    <ul>
+                        <span><img src="../img/shop.png" alt=""></span>
+                        <li><a href="javascript:;">购物车</a></li>
+                        <li>
+                            <a href="javascript:;">我的订单</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">我的当当</a>
+                            <div class="wrap-first">
+                                <a href="#">我的当当<span></span></a>
+                                <a href="#">我的订单</a>
+                                <a href="#">我的订单</a>
+                                <a href="#">我的订单</a>
+                                <a href="#">我的订单</a>
+                                <a href="#">我的订单</a>
+                            </div>
+                        </li>
+                        <li><a href="javascript:;">礼品卡</a></li>
+                        <li><a href="javascript:;">手机当当</a></li>
+                        <li><a href="javascript:;">企业销售</a></li>
+                        <li><a href="javascript:;">帮助</a></li>
+                    </ul>
+                </div>
+                <div class="wrap-right-bottom">
+                    <p>
+                        <span>欢迎光临当当网，请</span>
+                        <a href="http://localhost/dangdang/src/login.html" class="nsSB">登录</a>
+                        <a href="http://localhost/dangdang/src/register.html" class="nsSB">免费注册</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="ddnewcarthead_bottom"></div>
+    </div>
+    <!-- 注册表开始 -->
+    <div id="register_form">
+        <div id="bd">
+            <div class="shadow_box">
+                <div class="register_box">
+                    <div class="head">
+                        <a href="javascript:;" class="head_a head_a1">新用户注册 </a>
+                        <a href="javascript:;" class="head_a">企业用户注册</a>
+                        <span class="dd_more">
+                            <a href="" class="home">当当首页</a>
+                            <a href="">注册帮助</a>
+
+                        </span>
+                    </div>
+                    <div class="help_icon_trigger" style="left: 1235px;">
+                        <a href="" id="feedback"></a>
+                    </div>
+                    <div class="body">
+                        <div class="new_tip">
+                            <div>
+                                贴心提示：请勿设置与邮箱密码相同的账户登录密码或支付密码，防止不法分子窃取您的当当账户信息，
+                                <a href="">谨防诈骗</a></div>
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="t">手机号码</td>
+                                    <td class="z_index2">
+                                        <input type="text" id="txt_username" placeholder="请输入您的手机号码">
+                                        <span class="cue warn">手机号可用于登录、找回密码、接收订单通知等服务</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="t">登录密码</td>
+                                    <td class="z_index2">
+                                        <input type="password" id="txt_username" class="wsSB2" placeholder="请输入您的登录密码">
+                                        <span class="cue warn wsSBSPAN2">密码由6-20个字符，可由英文、数字及符号组成</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="t">确认密码</td>
+                                    <td class="z_index2">
+                                        <input type="password" id="txt_username" class="wsSB3" placeholder="请确认您的密码">
+                                        <span class="cue warn wsSBSPAN3"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- 图形验证码 -->
+
+                                    <!-- <td class="j-vcode">
+                                        <input class="text pin" type="text" id="txt_vcode" name="txt_vcode" autocomplete="off" placeholder="请输入验证码" maxlength="4" tabindex="5">
+                                        <a class="code_pic" id="vcodeImgWrap" name="change_code_img" href="javascript:void(0);">
+                                            <!-- <img id="imgVcode" title="点击更换验证码" alt="点击更换验证码" width="84" height="37" src=""> -->
+                                    </a>
+                                    <!-- <a id="vcodeImgBtn" name="change_code_link" class="code_picww" href="javascript:void(0);">换张图</a> -->
+                                    <!-- <span id="spn_vcode_ok" class="icon_yes pin_i" style="display: none;"></span>
+                                    <span id="J_tipVcode" class="cue warn"></span> -->-->
+                                    <!--<span class="icon_wrong pin_i"></span>-->
+                                    </td>
+                                    <!-- 短信验证码 -->
+                                    <td class="t j-phoneVcode" style="display: none">短信验证码</td>
+                                    <td class="j-phoneVcode" style="display: none">
+                                        <input id="J_MobileCode" name="txt_pop_sms_vcode" autocomplete="off" maxlength="6" tabindex="6" type="text" class="text pin" placeholder="请填写短信验证码">
+                                        <a class="get_pin get_pinUnClick" id="J_countDownTip" href="javascript:void(0);" style="display: none;" tabindex="5">2分钟后重新获取</a>
+                                        <a class="get_pin" id="sendMobileCode" href="javascript:void(0);" tabindex="5">获取短信验证码</a>
+                                        <span id="spn_mobileCode_ok" class="icon_yes" style="display: none;"></span>
+                                        <span id="J_tipMobileCode" class="cue"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="t">&nbsp;</td>
+                                    <td class="clause">
+                                        <span class="float_l">
+											<input id="chb_agreement" name="chb_agreement" onmouseover="this.style.cursor='pointer';this.style.cursor='hand';" tabindex="7" type="checkbox" checked="checked">我已阅读并同意
+											<a target="_blank" href="http://help.dangdang.com/details/page12" tabindex="8">《当当交易条款》</a>
+											<a target="_blank" href="http://help.dangdang.com/details/page42" tabindex="9">《当当社区条款》</a>和
+                                            <a target="_blank" href="http://help.dangdang.com/details/page258" tabindex="10">《当当隐私政策》</a>
+										</span>
+                                        <span id="J_tipAgreement" class="cue"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="t">&nbsp;</td>
+                                    <td><a id="J_submitRegister" href="javascript:void(0);" class="btn_login" tabindex="11">立即注册</a><a id="J_submitRegisterUnclick" style="display: none;" class="btn_login">注册中...</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 注册表结束 -->
+    <!-- 尾部开始 -->
+    <div class="footer_nav_box">
+        <div class="footer_nav"><a href="http://t.dangdang.com/companyInfo" target="_blank" rel="nofollow">公司简介</a><span class="sep">|</span><a href="http://zhaopin.dangdang.com" target="_blank">诚聘英才</a><span class="sep">|</span><a href="http://union.dangdang.com/" target="_blank">网站联盟</a>
+            <span class="sep">|</span><a href="http://outlets.dangdang.com/merchants_open" target="_blank">当当招商</a><span class="sep">|</span><a href="http://giftcard.dangdang.com/giftcardCompany" target="_blank" rel="nofollow">机构销售</a><span class="sep">|</span>
+            <a href="http://static.dangdang.com/topic/744/200778.shtml" target="_blank">手机当当</a><span class="sep">|</span><a href="http://blog.dangdang.com/" target="_blank">官方Blog</a><span class="sep">|</span> <a href="http://t.dangdang.com/intellectualProperty"
+                target="_blank" rel="nofollow">知识产权</a>
+            <span class="sep">|</span>
+            <div class="footer_hot_search"><a href="http://www.dangdang.com/sales/brands/" target="_blank" class="footer_a" id="hot_search" onmouseover="showghotsearch('hot_search','hot_search_content')" onmouseout="hidehotsearch('hot_search','hot_search_content');">热词搜索</a>
+                <div class="pos_a_box" style="display: none;" id="hot_search_content" onmouseover="showghotsearch('hot_search','hot_search_content')" onmouseout="hidehotsearch('hot_search','hot_search_content');">
+                    <a href="http://www.dangdang.com/sales/brands/a-1.html" target="_blank">A</a><a href="http://www.dangdang.com/sales/brands/b-1.html" target="_blank">B</a><a href="http://www.dangdang.com/sales/brands/c-1.html" target="_blank">C</a>
+                    <a href="http://www.dangdang.com/sales/brands/d-1.html" target="_blank">D</a><a href="http://www.dangdang.com/sales/brands/e-1.html" target="_blank">E</a><a href="http://www.dangdang.com/sales/brands/f-1.html" target="_blank">F</a>
+                    <a href="http://www.dangdang.com/sales/brands/g-1.html" target="_blank">G</a>
+                    <a href="http://www.dangdang.com/sales/brands/h-1.html" target="_blank">H</a><a href="http://www.dangdang.com/sales/brands/i-1.html" target="_blank">I</a><a href="http://www.dangdang.com/sales/brands/j-1.html" target="_blank">J</a>
+                    <a href="http://www.dangdang.com/sales/brands/k-1.html" target="_blank">K</a><a href="http://www.dangdang.com/sales/brands/l-1.html" target="_blank">L</a><a href="http://www.dangdang.com/sales/brands/m-1.html" target="_blank">M</a>
+                    <a href="http://www.dangdang.com/sales/brands/n-1.html" target="_blank">N</a>
+                    <a href="http://www.dangdang.com/sales/brands/o-1.html" target="_blank">O</a><a href="http://www.dangdang.com/sales/brands/p-1.html" target="_blank">P</a><a href="http://www.dangdang.com/sales/brands/q-1.html" target="_blank">Q</a>
+                    <a href="http://www.dangdang.com/sales/brands/r-1.html" target="_blank">R</a><a href="http://www.dangdang.com/sales/brands/s-1.html" target="_blank">S</a><a href="http://www.dangdang.com/sales/brands/t-1.html" target="_blank">T</a>
+                    <a href="http://www.dangdang.com/sales/brands/u-1.html" target="_blank">U</a>
+                    <a href="http://www.dangdang.com/sales/brands/v-1.html" target="_blank">V</a><a href="http://www.dangdang.com/sales/brands/w-1.html" target="_blank">W</a><a href="http://www.dangdang.com/sales/brands/x-1.html" target="_blank">X</a>
+                    <a href="http://www.dangdang.com/sales/brands/y-1.html" target="_blank">Y</a><a href="http://www.dangdang.com/sales/brands/z-1.html" target="_blank">Z</a><a href="http://www.dangdang.com/sales/brands/other-1.html" target="_blank">0-9</a>
+                    <i></i></div>
+            </div>
+
+        </div>
+        <div class="footer_copyright"><span>Copyright (C) 当当网 2004-2020, All Rights Reserved</span></div>
+        <div class="footer_copyright"><span>京ICP证041189号</span><span class="sep">|</span><a href="http://img61.ddimg.cn/upload_img/00797/myoder/cbw2-1548208562.jpg" target="_blank"><span>出版物经营许可证 新出发京批字第直0673号</span></a><span class="sep">|</span><a href="http://img63.ddimg.cn/upload_img/00797/myoder/food-1548208670.jpg"
+                target="_blank"><span>食品经营许可证：JY11101050363440</span></a><br><a href="http://beian.miit.gov.cn" target="_blank"><span>京ICP备17043473号</span></a><span class="sep">|</span>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502037644" target="_blank"><img style="vertical-align:middle;/* vertical-align: middle; */" src="https://img60.ddimg.cn/assets/pc_image/jinggongwanganbei.png" alt="京公网安备 11010502037644号"><span style="margin-left:5px">京公网安备11010502037644号</span></a><span class="sep">|</span>
+            <a href="http://img63.ddimg.cn/upload_img/00803/UED/4B9E4C6A73C58D55D84166295B032535-1561518789.jpg" target="_blank"><span>经营许可证编号：合字B2-20160011</span></a><span class="sep">|</span><span>互联网药品信息服务资格证</span><br><span>互联网违法和不良信息举报电话：4001066666-5 邮箱：<a href="mailto:service@cs.dangdang.com">service@cs.dangdang.com</a></span><br><span><a href="http://img63.ddimg.cn/upload_img/00550/zhengjian/wlfwcbxkz_2017.jpg" target="_blank">网络出版服务许可证（总）网出证（京）字第049号</a></span><span><a href="http://img63.ddimg.cn/upload_img/00797/myoder/kewen2-1554881751.jpg" target="_blank">北京当当科文电子商务有限公司</a>，公司地址：北京市朝阳区北三环东路8号静安中心21层</span></div>
+        <!-- 有三个icon的时候加footer_icon2 -->
+        <div class="footer_icon footer_icon2" style="padding-left: 55px;">
+            <div class="validator logo3">
+                <a href="javascript:;" target="_blank" class="footer_img"><img src="http://img61.ddimg.cn/7d593c48-48f6-4fc9-85e0-7d6e10dfc2a2.hpvgUvc9"></a>
+            </div>
+            <div class="validator logo4">
+                <a id="_pingansec_bottomimagesmall_brand" href="http://si.trustutn.org/info?sn=302161014024825726885&amp;certType=1" target="_blank"><img src="http://img63.ddimg.cn/upload_img/00111/home/brand_128_47.png"></a>
+            </div>
+            <div class="validator logo5" style="width:182px;">
+                <a href="http://www.12377.cn/" target="_blank"><img src="http://img60.ddimg.cn/upload_img/00459/home/hlwjbzx_182.png"></a>
+            </div>
+            <div class="validator logo6">
+                <a href="https://ss.knet.cn/verifyseal.dll?sn=e171222110106707892fbp000000&amp;ct=df&amp;a=1&amp;pa=0.6746452838389019" target="_blank"><img src="http://img60.ddimg.cn/upload_img/00459/home/cnnic.png" alt="可信网站"></a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+<script src="../js/register.js"></script>
+<script src="../js/jquery.js"></script>
+
+</html>
