@@ -1,0 +1,85 @@
+.nsfz {
+  width: 1200px;
+  height: 48px;
+  margin: 0 auto;
+}
+
+.nsfz b {
+  font: 14px/40px "Microsoft Yahei";
+  font-weight: 600;
+}
+
+.product {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.product .pic_info {
+  float: left;
+  width: 400px;
+}
+
+.product .pic_info .dt img {
+  width: 400px;
+}
+
+.product .pic_info .xt {
+  width: 400px;
+  height: 56px;
+  background: red;
+}
+
+.product .pic_info .share {
+  height: 35px;
+}
+
+.product .show_info {
+  float: left;
+  width: 780px;
+  height: 533px;
+}
+
+.product .show_info .left {
+  width: 550px;
+}
+
+.product .show_info .left .title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+  padding: 0 6px 12px 0;
+}
+
+.product .show_info .left .star {
+  padding: 5px 0 10px 0;
+}
+
+.product .show_info .left .star span {
+  display: inline-block;
+  width: 70px;
+  height: 12px;
+  background: url(../img/icon_star.png) repeat-x 0 -12px;
+}
+
+.product .show_info .left .price {
+  width: 550px;
+  height: 143px;
+}
+
+.product .show_info .left .price .left {
+  float: left;
+  background-color: #fcfaf7;
+  line-height: 24px;
+}
+
+.product .show_info .left .price .right {
+  float: left;
+}
+
+.product .show_info .left .price .right img {
+  display: inline-block;
+  width: 270px;
+  height: 173px;
+}

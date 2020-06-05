@@ -1,5 +1,5 @@
-@charset 'utf-8';
-@import './public.scss';
+@charset "utf-8";
+@import 'public';
 html {
     background-color: #f6f9fb;
 }
@@ -132,7 +132,6 @@ html {
     margin: 0 auto;
 }
 
-// 注册表开始
 #bd {
     margin: 0 auto;
     width: 960px;

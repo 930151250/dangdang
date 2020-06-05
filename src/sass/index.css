@@ -498,7 +498,7 @@ img {
 
 .main .rybh {
   width: 1200px;
-  height: 500px;
+  height: 372px;
   margin: 0 auto;
   overflow: hidden;
   border: 1px solid #ccc;
@@ -551,6 +551,11 @@ img {
   padding-left: 5px;
 }
 
+.main .rybh .rybh-middle {
+  overflow: hidden;
+  width: 1200px;
+}
+
 .main .rybh .rybh-middle .left {
   width: 400px;
 }
@@ -563,6 +568,7 @@ img {
 
 .main .rybh .rybh-middle .main {
   float: left;
+  overflow: hidden;
 }
 
 .main .rybh .rybh-middle .right {
@@ -585,6 +591,59 @@ img {
 
 .main .rwsk .img2 {
   margin: 0 23px 0 23px;
+}
+
+.tuiJian {
+  width: 1200px;
+  height: 36px;
+  margin: 0 auto;
+  border-bottom: 3px solid red;
+  line-height: 36px;
+}
+
+.tuiJian h3 {
+  font-size: 18px;
+  color: red;
+  font-weight: 600;
+}
+
+.project {
+  width: 1200px;
+  height: 1382px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.project .project-first {
+  width: 198px;
+  height: 271px;
+  background-color: pink;
+}
+
+.project .project-first img {
+  width: 190px;
+  height: 190px;
+  display: block;
+  margin-left: 4px;
+}
+
+.project .project-first i {
+  font-size: 13px;
+  color: #666;
+  display: block;
+  width: 184px;
+  height: 40px;
+  overflow: hidden;
+  margin-left: 4px;
+}
+
+.project .project-first span {
+  color: #ff2832;
+  font-size: 18px;
+  margin-left: 4px;
 }
 
 .footer {
