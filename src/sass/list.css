@@ -1,0 +1,44 @@
+.list {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list ul li {
+  width: 198px;
+  height: 271px;
+  background-color: pink;
+}
+
+.list ul li img {
+  width: 190px;
+  height: 190px;
+  display: block;
+  margin-left: 4px;
+}
+
+.list ul li p {
+  font-size: 13px;
+  color: #666;
+  display: block;
+  width: 184px;
+  height: 40px;
+  overflow: hidden;
+  margin-left: 4px;
+}
+
+.list ul li span {
+  color: #ff2832;
+  font-size: 18px;
+  margin-left: 4px;
+}
+
+.btnlist {
+  width: 1200px;
+  margin: 0 auto;
+}

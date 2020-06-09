@@ -231,5 +231,10 @@ img {
           line-height: 38px;
           border: none;
           outline: none; }
+      .login_bg .wrap .login-box .behind .btn {
+        display: block;
+        width: 370px;
+        height: 40px;
+        background: red; }
 
 /*# sourceMappingURL=login.css.map */

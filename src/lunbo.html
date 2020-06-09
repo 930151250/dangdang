@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .banner {
+            width: 790px;
+            height: 340px;
+            margin: 20px auto;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .banner ul li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: all .3s;
+        }
+        
+        .banner ol {
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+        }
+        
+        .banner ol li {
+            width: 20px;
+            height: 20px;
+            background: pink;
+            border-radius: 50%;
+            float: left;
+            margin-right: 10px;
+        }
+        
+        .banner #left,
+        .banner #right {
+            font-size: 100px;
+            color: white;
+            position: absolute;
+            text-decoration: none;
+            top: 50%;
+            margin-top: -60px;
+            cursor: pointer;
+        }
+        
+        .banner #right {
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <ul>
+            <li style='opacity:1'><img src="http://img62.ddimg.cn/2020/6/5/2020060519334093619.jpg" alt=""></li>
+            <li><img src="http://img60.ddimg.cn/2020/6/5/2020060510292122844.jpg" alt=""></li>
+            <li><img src="http://img63.ddimg.cn/2020/6/5/2020060511293227580.jpg" alt=""></li>
+            <li><img src="http://img61.ddimg.cn/2020/6/4/202006041824418431.jpg" alt=""></li>
+            <li><img src="http://img61.ddimg.cn/2020/6/5/2020060510253032723.jpg" alt=""></li>
+        </ul>
+        <ol>
+            <li class="active">1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+        </ol>
+        <a id="left">&lt;</a>
+        <a id="right">&gt;</a>
+    </div>
+    <script>
+        class Banner {
+            constructor() {
+                //获取元素
+                this.banner = document.querySelector('.banner');
+                this.piclist = document.querySelectorAll('.banner ul li');
+                this.btnList = document.querySelectorAll('.banner ol li');
+                this.left = document.querySelector('#left');
+                this.right = document.querySelector('#right');
+                this.timer = null; //定时器的返回值
+                this.index = 0;
+            }
+            init() {
+                    //点击按钮 切换图片
+                    for (let i = 0; i < this.btnList.length; i++) {
+                        this.btnList[i].onclick = () => {
+                            this.index = i;
+                            this.tabswitch();
+                        }
+                    }
+                    this.right.onclick = () => {
+                        this.index++;
+                        console.log(this.index)
+                        if (this.index > this.btnList.length - 1) {
+                            this.index = 0;
+                        }
+                        this.tabswitch();
+                    }
+                    this.autoplay();
+                    this.left.onclick = () => {
+                        this.index--;
+                        if (this.index < 0) {
+                            this.index = this.btnList.length - 1
+                        }
+                        this.tabswitch();
+                    }
+                }
+                //切换过程
+            tabswitch() {
+                for (let j = 0; j < this.btnList.length; j++) {
+                    this.btnList[j].className = '';
+                    this.piclist[j].style.opacity = 0;
+
+                }
+                this.btnList[this.index].className = 'active';
+                this.piclist[this.index].style.opacity = 1;
+            }
+            autoplay() {
+                this.timer = setInterval(() => {
+                    this.right.onclick();
+                }, 2000)
+            }
+
+        }
+
+        new Banner().init();
+    </script>
+</body>
+
+</html>

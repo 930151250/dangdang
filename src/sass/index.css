@@ -185,11 +185,13 @@ img {
 
 .header-top .wrap {
   width: 1200px;
+  height: 34px;
   margin: 0 auto;
 }
 
 .header-top .wrap .left .ddnewhead_area .ddnewhead_area_a {
   position: relative;
+  cursor: pointer;
 }
 
 .header-top .wrap .left .ddnewhead_area .ddnewhead_area_a span {
@@ -202,23 +204,29 @@ img {
   transform: rotate(-45deg);
   position: absolute;
   left: 65px;
-  top: 3px;
+  top: 11px;
 }
 
 .header-top .wrap .left .ddnewhead_area .menu {
   width: 270px;
   height: 180px;
   border: 1px solid black;
-  padding: 10px;
   box-sizing: border-box;
+  position: absolute;
   display: none;
+  background-color: #fff;
+  padding-left: 20px;
+  padding-top: 6px;
+  box-sizing: border-box;
 }
 
 .header-top .wrap .left .ddnewhead_area .menu a {
-  margin-left: 8px;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
 }
 
-.header-top .wrap .left .ddnewhead_area .menu .ddnewhead_area_a:hover .menu {
+.header-top .wrap .ddnewhead_area:hover .menu {
   display: block;
 }
 
@@ -243,10 +251,28 @@ img {
 .header-top .wrap .right ul li {
   float: left;
   padding: 0 5px 0 5px;
+  position: relative;
 }
 
-.header-top .wrap .right ul em {
+.header-top .wrap .right ul li em {
   padding-left: 5px;
+}
+
+.header-top .wrap .right ul li .erji {
+  width: 48px;
+  background-color: white;
+  position: absolute;
+  z-index: 800;
+  line-height: 30px;
+  padding: 0 8px;
+  right: 8px;
+  border: 1px solid #ccc;
+  border-top: none;
+  display: none;
+}
+
+.right ul li:nth-child(2):hover .erji {
+  display: block;
 }
 
 .header-middle {
@@ -442,6 +468,10 @@ img {
   color: red !important;
 }
 
+.main {
+  overflow: hidden;
+}
+
 .main .main-topimg {
   width: 1200px;
   margin: 0 auto;
@@ -458,7 +488,7 @@ img {
 .main .main-nav .nav {
   float: left;
   width: 180px;
-  height: 480;
+  height: 480px;
   background-color: #fafafa;
   padding-left: 18px;
 }
@@ -471,11 +501,34 @@ img {
   font-size: 14px;
 }
 
+.main .main-nav .cartlist {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  float: left;
+  position: absolute;
+  left: 198px;
+  background: white;
+  z-index: 1000;
+}
+
 .main .main-nav .banner {
   width: 796px;
   height: 326px;
   border: 1px solid blue;
   float: left;
+  position: relative;
+}
+
+.main .main-nav .banner .left,
+.main .main-nav .banner .right {
+  font-size: 100px;
+  color: red;
+  background: #ccc;
+  position: absolute;
+  text-decoration: none;
+  top: 50%;
+  cursor: pointer;
 }
 
 .main .main-nav .banner-bottom {
@@ -494,6 +547,12 @@ img {
   width: 202px;
   height: 173px;
   border: 1px solid blue;
+}
+
+.main .main-nav .xxgg .xxgg3 {
+  width: 202px;
+  height: 115px;
+  border: 1px solid black;
 }
 
 .main .rybh {
@@ -609,7 +668,6 @@ img {
 
 .project {
   width: 1200px;
-  height: 1382px;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 10px 15px;
@@ -617,20 +675,26 @@ img {
   margin-top: 10px;
 }
 
-.project .project-first {
+.project ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project ul li {
   width: 198px;
   height: 271px;
   background-color: pink;
 }
 
-.project .project-first img {
+.project ul li img {
   width: 190px;
   height: 190px;
   display: block;
   margin-left: 4px;
 }
 
-.project .project-first i {
+.project ul li p {
   font-size: 13px;
   color: #666;
   display: block;
@@ -640,7 +704,7 @@ img {
   margin-left: 4px;
 }
 
-.project .project-first span {
+.project ul li span {
   color: #ff2832;
   font-size: 18px;
   margin-left: 4px;

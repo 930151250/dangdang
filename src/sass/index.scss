@@ -8,11 +8,13 @@
     line-height: 34px;
     .wrap {
         width: 1200px;
+        height: 34px;
         margin: 0 auto;
         .left {
             .ddnewhead_area {
                 .ddnewhead_area_a {
                     position: relative;
+                    cursor: pointer;
                     span {
                         display: inline-block;
                         // background: url(../img/head_sprite1.png) no-repeat top -318px left;
@@ -28,24 +30,30 @@
                         transform: rotate(-45deg);
                         position: absolute;
                         left: 65px;
-                        top: 3px;
+                        top: 11px;
                     }
                 }
                 .menu {
                     width: 270px;
                     height: 180px;
                     border: 1px solid black;
-                    padding: 10px;
                     box-sizing: border-box;
+                    position: absolute;
                     display: none;
+                    background-color: #fff;
+                    padding-left: 20px;
+                    padding-top: 6px;
+                    box-sizing: border-box;
                     a {
-                        margin-left: 8px;
-                    }
-                    .ddnewhead_area_a:hover .menu {
-                        display: block;
+                        display: inline-block;
+                        width: 30px;
+                        height: 20px;
                     }
                 }
             }
+        }
+        .ddnewhead_area:hover .menu {
+            display: block;
         }
         .right {
             float: right;
@@ -62,15 +70,37 @@
                 li {
                     float: left;
                     padding: 0 5px 0 5px;
-                }
-                em {
-                    padding-left: 5px;
+                    position: relative;
+                    em {
+                        padding-left: 5px;
+                    }
+                    .erji {
+                        width: 48px;
+                        // height: 100px;
+                        background-color: white;
+                        position: absolute;
+                        z-index: 800;
+                        line-height: 30px;
+                        padding: 0 8px;
+                        right: 8px;
+                        border: 1px solid #ccc;
+                        border-top: none;
+                        display: none;
+                    }
                 }
             }
         }
     }
 }
 
+.right ul li:nth-child(2):hover .erji {
+    display: block;
+}
+
+// .right ul li:nth-child(2):hover .erji a {
+//     color: red;
+//     z-index: 811;
+// }
 .header-middle {
     width: 1200px;
     margin: 0 auto;
@@ -246,6 +276,7 @@
 // 头部结束
 // 导航开始
 .main {
+    overflow: hidden;
     .main-topimg {
         width: 1200px;
         margin: 0 auto;
@@ -259,7 +290,7 @@
         .nav {
             float: left;
             width: 180px;
-            height: 480;
+            height: 480px;
             //border: 1px solid #487a6f;
             background-color: #fafafa;
             padding-left: 18px;
@@ -271,11 +302,33 @@
                 font-size: 14px;
             }
         }
+        .cartlist {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            float: left;
+            position: absolute;
+            left: 198px;
+            background: white;
+            z-index: 1000;
+        }
         .banner {
             width: 796px;
             height: 326px;
             border: 1px solid blue;
             float: left;
+            position: relative;
+            .left,
+            .right {
+                font-size: 100px;
+                color: red;
+                background: #ccc;
+                position: absolute;
+                text-decoration: none;
+                top: 50%;
+                //margin-top: -60px;
+                cursor: pointer;
+            }
         }
         .banner-bottom {
             width: 796px;
@@ -291,7 +344,11 @@
                 height: 173px;
                 border: 1px solid blue;
             }
-            .xxgg3 {}
+            .xxgg3 {
+                width: 202px;
+                height: 115px;
+                border: 1px solid black;
+            }
         }
     }
     // 日用百货开始
@@ -397,35 +454,39 @@
 //为您推荐商品列表
 .project {
     width: 1200px;
-    height: 1382px;
     margin: 0 auto;
     box-sizing: border-box;
     padding: 10px 15px;
     border: 1px solid #ccc;
     margin-top: 10px;
-    .project-first {
-        width: 198px;
-        height: 271px;
-        background-color: pink;
-        img {
-            width: 190px;
-            height: 190px;
-            display: block;
-            margin-left: 4px;
-        }
-        i {
-            font-size: 13px;
-            color: #666;
-            display: block;
-            width: 184px;
-            height: 40px;
-            overflow: hidden;
-            margin-left: 4px;
-        }
-        span {
-            color: #ff2832;
-            font-size: 18px;
-            margin-left: 4px;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+            width: 198px;
+            height: 271px;
+            background-color: pink;
+            img {
+                width: 190px;
+                height: 190px;
+                display: block;
+                margin-left: 4px;
+            }
+            p {
+                font-size: 13px;
+                color: #666;
+                display: block;
+                width: 184px;
+                height: 40px;
+                overflow: hidden;
+                margin-left: 4px;
+            }
+            span {
+                color: #ff2832;
+                font-size: 18px;
+                margin-left: 4px;
+            }
         }
     }
 }

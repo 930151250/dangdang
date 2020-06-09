@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>【初语T恤】【618提前购，秒杀价：26元】初语夏季新品 圆领字母印花宽松ins短袖t恤女开学季学生上衣价格_品牌_图片_评论-当当网</title>
     <link rel="stylesheet" href="css/head.css">
     <link rel="stylesheet" href="./css/foot.css">
     <link rel="stylesheet" href="./css/detail.css">
@@ -27,21 +27,87 @@
     <div class="product">
         <!-- 大图开始 -->
         <div class="pic_info">
-            <div class="dt">
-                <a href=""><img src="http://img3m9.ddimg.cn/93/16/1111752669-2_u_1.jpg" alt=""></a>
-            </div>
             <div class="xt">
+                <a href=""><img src="http://img3m9.ddimg.cn/93/16/1111752669-2_u_1.jpg" alt=""></a>
+                <div class="move_b"></div>
+            </div>
+            <!-- 隐藏的放大镜盒子 -->
+            <div class="big">
+                <img src="http://img3m9.ddimg.cn/93/16/1111752669-2_u_1.jpg" alt="" class="bigpic">
+            </div>
+            <!-- 隐藏的放大镜盒子 -->
+            <script src="./js/public2.js"></script>
+            <script>
+                $(function() {
+                    var movebox = $('.move_b'),
+                        bigpic = $('.bigpic'),
+                        big = $('.big'),
+                        smallpic = $('.xt');
+
+                    // 1. 绑定事件
+                    smallpic.on('mouseover', function() {
+
+                        // 让元素显示
+                        movebox.addClass('show_1'); //这个是什么
+                        big.addClass('show_1');
+
+                        // movebox的大小计算
+                        movebox.css({
+                            width: (smallpic.width() * big.width()) / bigpic.width() + 'px',
+                            height: (smallpic.height() * big.height()) / bigpic.height() + 'px',
+                        })
+
+
+                        // 2.让movebox跟随鼠标移动
+                        smallpic.on('mousemove', function(ev) {
+                            let top = ev.pageY - smallpic.offset().top - movebox.height() / 2;
+                            let left = ev.pageX - smallpic.offset().left - movebox.width() / 2;
+                            console.log(ev.pageY, smallpic.offset().top)
+                                // 3.比例计算
+
+                            let ratio = bigpic.height() / smallpic.height(); // 小数 大于1的数
+
+                            // 边界管理
+                            if (top <= 0) {
+                                top = 0;
+                            } else if (top >= smallpic.height() - movebox.height()) {
+                                top = smallpic.height() - movebox.height();
+                            }
+
+                            if (left <= 0) {
+                                left = 0;
+                            } else if (left >= smallpic.width() - movebox.width()) {
+                                left = smallpic.width() - movebox.width();
+                            }
+
+                            movebox.css({
+                                top: top + 'px',
+                                left: left + 'px'
+                            });
+
+                            bigpic.css({
+                                top: -top * ratio + 'px',
+                                left: -left * ratio + 'px'
+                            });
+                        });
+                    });
+
+                    smallpic.on('mouseout', function() {
+                        movebox.removeClass('show_1');
+                        big.removeClass('show_1');
+                    });
+                });
+            </script>
+            <!-- 下面的小图列表 -->
+            <div class="xtlist">
 
             </div>
+
             <div class="share">
                 <a href=""><i></i>分享</a>
                 <a href=""><i></i>收藏商品(51人气)</a>
             </div>
-            <!-- 隐藏的放大镜盒子 -->
-            <div class="score">
 
-            </div>
-            <!-- 隐藏的放大镜盒子 -->
         </div>
         <!-- 大图结束 -->
         <!-- 详情开始 -->
@@ -56,21 +122,103 @@
                         <div class="diaopaijia">吊牌价399.00</div>
                     </div>
                     <div class="right">
-                        <a href=""><img src="https://img60.ddimg.cn/assets/pc_image/minaAttract-product-price.gif" alt=""></a>
+                        <a href=""><img src="https://img60.ddimg.cn/assets/pc_image/minaAttract-product-price.gif" alt="" class="img1">
+                            <span><img src="http://img7x9.ddimg.cn/imgother121/3/28/1111753569_1.jpg" alt="" class="img2"></span></a>
+                    </div>
+                </div>
+                <div class="lq"><span>领券</span><a href="">满一件 9折</a></div>
+                <div class="buy">
+                    <div class="num">
+                        <input type="submit" value="1" class="num_0">
+                        <div class="num_1">
+                            <input type="submit" value="+" class="num_2">
+                            <input type="submit" value="-" class="num_3">
+                        </div>
+                    </div>找到了再开始计时
+                    <div class="buy-box">
+                        <a href="" class="jrgwc">
+                            <i></i>加入购物车
+                        </a>
+                        <a href="" class="ljgm">
+                            立即购买
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="right"></div>
+            <div class="right1">
+                <div class="qjd"><a href="">初语官方旗舰店</a></div>
+                <div class="dpzf"><span>店铺总分</span><i>4.79</i><em>分</em></div>
+                <div class="msfw"><span>描述</span><span>服务</span><span>发货</span></div>
+            </div>
         </div>
         <!-- 详情结束 -->
     </div>
     <!-- 详情结束 -->
+    <!-- 商品详情开始 -->
+    <div class="spxq">
+        <ul class="">
+            <li class="xq"><a href="">商品详情</a></li>
+            <li class="pl"><a href="">商品评论</a></li>
+            <li class="wd"><a href="">商品问答</a></li>
+        </ul>
+        <div class="pinpai">
+            <div class="chuyu">
+                <ul>
+                    <li><span>品牌：</span><a href="">初语</a></li>
+                    <li><span>品牌：</span><a href="">初语</a></li>
+                    <li><span>品牌：</span><a href="">初语</a></li>
+                    <li><span>品牌：</span><a href="">初语</a></li>
+                </ul>
+            </div>
+            <!-- <div class="xinghao">
+                <ul>
+                    <li><span>品牌：</span><a href="">初语</a></li>
+                    <li><span>品牌：</span><a href="">初语</a></li>
+                    <li><span>品牌：</span><a href="">初语</a></li>
+                    <li><span>品牌：</span><a href="">初语</a></li>
+                </ul>
+            </div>
+            <div class="xiuxing">
+                <ul>
+                    <li><span>品牌：</span><a href="">初语</a></li>
+                    <li><span>品牌：</span><a href="">初语</a></li>
+                    <li><span>品牌：</span><a href="">初语</a></li>
+                    <li><span>品牌：</span><a href="">初语</a></li>
+                </ul>
+            </div> -->
+        </div>
+        <div class="xiangqing">
+            <span>详情</span>
+        </div>
+        <div class="tupian">
+            <img src="http://img56.ddimg.cn/77100033127776.jpg" alt="">
+            <img src="http://img51.ddimg.cn/77100033127781.jpg" alt="">
+            <img src="http://img53.ddimg.cn/77100033127783.jpg" alt="">
+            <img src="http://img56.ddimg.cn/77100033127786.jpg" alt="">
+            <img src="http://img50.ddimg.cn/77100033127790.jpg" alt="">
+            <img src="http://img52.ddimg.cn/77100033127792.jpg" alt="">
+            <img src="http://img54.ddimg.cn/77100033127794.jpg" alt="">
+        </div>
+        <div class="price_indication">
+            <div class="title">价格说明</div>
+            <ul>
+                <li><span><i></i>当当价</span>为商品的销售价，具体的成交价可能因会员使用优惠券、银铃铛等发生变化，最终以订单结算页价格为准。</li>
+                <li><span><i></i>划线价</span>划线价格可能是图书封底定价、商品吊牌价、品牌专柜价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品曾经展示过的销售价等，由于地区、时间的差异化和市场行情波动，商品吊牌价、品牌专柜价等可能会与您购物时展示的不一致，该价格仅供您参考。</li>
+                <li><span><i></i>折扣</span>折扣指在划线价（图书定价、商品吊牌价、品牌专柜价、厂商指导价等）某一价格基础上计算出的优惠比例或优惠金额。如有疑问，您可在购买前联系客服咨询。</li>
+                <li><span><i></i>异常问题</span>如您发现活动商品销售价或促销信息有异常，请立即联系我们补正，以便您能顺利购物。</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 商品详情结束 -->
     <!-- 尾部开始 -->
     <div class="commonFooter"></div>
     <!-- 尾部结束 -->
+    <script src="../../lun_.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/head.js"></script>
     <script src="js/foot.js"></script>
+    <script src="js/detail.js"></script>
+
 </body>
 
 </html>
