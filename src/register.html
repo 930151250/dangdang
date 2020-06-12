@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/register.css">
+    <script src="./js/jquery.js"></script>
 
 </head>
 
@@ -79,40 +80,54 @@
                         </div>
                         <table>
                             <tbody>
-                                <tr>
-                                    <td class="t">手机号码</td>
-                                    <td class="z_index2">
-                                        <input type="text" id="txt_username" placeholder="请输入您的手机号码">
-                                        <span class="cue warn">手机号可用于登录、找回密码、接收订单通知等服务</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="t">登录密码</td>
-                                    <td class="z_index2">
-                                        <input type="password" id="txt_username" class="wsSB2" placeholder="请输入您的登录密码">
-                                        <span class="cue warn wsSBSPAN2">密码由6-20个字符，可由英文、数字及符号组成</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="t">确认密码</td>
-                                    <td class="z_index2">
-                                        <input type="password" id="txt_username" class="wsSB3" placeholder="请确认您的密码">
-                                        <span class="cue warn wsSBSPAN3"></span>
-                                    </td>
-                                </tr>
+                                <!-- <form action="http://10.31.162.60/dangdang/php/login.php" method="POST"> -->
+                                <div>
+                                    <tr>
+                                        <td class="t">手机号码</td>
+                                        <td class="z_index2">
+                                            <input type="text" id="txt_username" placeholder="请输入您的手机号码" name="phone">
+                                            <span class="cue warn">手机号可用于登录、找回密码、接收订单通知等服务</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="t">登录密码</td>
+                                        <td class="z_index2">
+                                            <input type="password" id="txt_username" class="wsSB2" placeholder="请输入您的登录密码" name="password">
+                                            <span class="cue warn wsSBSPAN2">密码由6-20个字符，可由英文、数字及符号组成</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="t">确认密码</td>
+                                        <td class="z_index2">
+                                            <input type="password" id="txt_username" class="wsSB3" placeholder="请确认您的密码" name="password2">
+                                            <span class="cue warn wsSBSPAN3"></span>
+                                            <input type="submit" value="立即注册" name="submit" class="submit" href='www.baidu.com'>
+                                        </td>
+                                    </tr>
+                                    <!-- <tr>
+                                        <td class="t">电子邮箱</td>
+                                        <td class="z_index2">
+                                            <input type="text" id="txt_username" class="wsSB4" placeholder="请输入您的电子邮箱" name="phone">
+                                            <span class="cue warn wsSBSPAN4">邮箱可用于登录、找回密码、接收订单通知等服务</span>
+                                        </td>
+                                    </tr> -->
+                                    <!-- </form> -->
+                                </div>
                                 <tr>
                                     <!-- 图形验证码 -->
 
-                                    <!-- <td class="j-vcode">
+
+                                    <!--  <td class="j-vcode">
                                         <input class="text pin" type="text" id="txt_vcode" name="txt_vcode" autocomplete="off" placeholder="请输入验证码" maxlength="4" tabindex="5">
                                         <a class="code_pic" id="vcodeImgWrap" name="change_code_img" href="javascript:void(0);">
-                                            <!-- <img id="imgVcode" title="点击更换验证码" alt="点击更换验证码" width="84" height="37" src=""> -->
+                                            <img id="imgVcode" title="点击更换验证码" alt="点击更换验证码" width="84" height="37" src="">
                                     </a>
-                                    <!-- <a id="vcodeImgBtn" name="change_code_link" class="code_picww" href="javascript:void(0);">换张图</a> -->
+                                    <a id="vcodeImgBtn" name="change_code_link" class="code_picww" href="javascript:void(0);">换张图</a> -->
                                     <!-- <span id="spn_vcode_ok" class="icon_yes pin_i" style="display: none;"></span>
-                                    <span id="J_tipVcode" class="cue warn"></span> -->-->
-                                    <!--<span class="icon_wrong pin_i"></span>-->
-                                    </td>
+                                    <span id="J_tipVcode" class="cue warn"></span> -->
+                                    <!--<span class="icon_wrong pin_i"></span>
+                                    </td> -->
                                     <!-- 短信验证码 -->
                                     <td class="t j-phoneVcode" style="display: none">短信验证码</td>
                                     <td class="j-phoneVcode" style="display: none">
@@ -137,7 +152,7 @@
                                 </tr>
                                 <tr>
                                     <td class="t">&nbsp;</td>
-                                    <td><a id="J_submitRegister" href="javascript:void(0);" class="btn_login" tabindex="11">立即注册</a><a id="J_submitRegisterUnclick" style="display: none;" class="btn_login">注册中...</a></td>
+                                    <!-- <td><a id="J_submitRegister" href="javascript:void(0);" class="btn_login" tabindex="11">立即注册</a><a id="J_submitRegisterUnclick" style="display: none;" class="btn_login">注册中...</a></td> -->
                                 </tr>
                             </tbody>
                         </table>
@@ -194,7 +209,8 @@
         <div class="clear"></div>
     </div>
 </body>
-<script src="../js/register.js"></script>
-<script src="../js/jquery.js"></script>
+
+<script src="./js/register.js"></script>
+
 
 </html>

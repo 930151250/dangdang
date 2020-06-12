@@ -25,7 +25,7 @@
                         <img class="lazy" data-original="${value.url}" width="200" height="200"/>
                         <p>${value.sid}${value.title}</p>
                         <span class="price">￥${value.price}</span>
-                        <span>${value.cat_two_id}</span>
+                        <span>${value.cat_id}</span>
                     </a>
                 </li>
             `;
@@ -65,7 +65,7 @@
         callback: function(api) {
             console.log(api.getCurrent()); //获取的页码给后端
             $.ajax({
-                url: 'http://10.31.162.60/dangdang/php/data.php',
+                url: 'http://10.31.162.60/dangdang/php/listdata.php',
                 data: {
                     page: api.getCurrent()
                 },

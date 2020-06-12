@@ -28,13 +28,27 @@
         position: absolute;
         left: 0;
         top: 0;
-        display: none; }
+        visibility: hidden; }
       .product .pic_info .xt .show_1 {
         display: block; }
-    .product .pic_info .xtlist {
+    .product .pic_info #ulist {
       width: 400px;
       height: 56px;
-      background: red; }
+      background: red;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: absolute;
+      top: 420px;
+      overflow: hidden; }
+      .product .pic_info #ulist li {
+        width: 50px;
+        height: 50px;
+        float: left; }
+        .product .pic_info #ulist li img {
+          display: inline-block;
+          width: 50px;
+          height: 50px; }
     .product .pic_info .share {
       height: 35px; }
     .product .pic_info .show_1 {
@@ -45,7 +59,7 @@
       overflow: hidden;
       position: absolute;
       left: 400px;
-      display: none; }
+      visibility: hidden; }
       .product .pic_info .big .bigpic {
         z-index: 800;
         position: absolute;

@@ -1,2 +1,60 @@
 @charset "utf-8";
 @import 'public';
+.main {
+    width: 1200px;
+    margin: 0 auto;
+    //background: red;
+    height: 200px;
+    .shopping-title ul {
+        width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 60px;
+        line-height: 60px;
+        background: #ccc;
+        .f1 a {
+            border-color: #ff2832;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #bcbcbc;
+            background: url('../img/icon_sprite.png')
+        }
+    }
+    .shopping-total {
+        width: 1200px;
+        margin: 0 auto;
+        ul {
+            line-height: 60px;
+            height: 60px;
+            background: #ffffaa;
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+    .shopping-list {
+        width: 1200px;
+        margin: 0 auto;
+        border: 1px solid black;
+        margin: 10px 0;
+        .cartlist {
+            padding: 10px 5px;
+            .itemlist {
+                .goods-item {
+                    .goods-info {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        .quantity {
+                            input {
+                                width: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

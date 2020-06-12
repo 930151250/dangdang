@@ -1,8 +1,11 @@
 <?php
+
 include "conn.php";
-$conn->query('SET NAMES UTF8');
+
+
+
 if(isset($_GET['sid'])){
     $sid=$_GET['sid'];
-    $resule=$conn->query("select * from user where sie=$sid");
+    $result=$conn->query("select * from dangdanggoods where sid=$sid");
     echo json_encode($result->fetch_assoc());
 }

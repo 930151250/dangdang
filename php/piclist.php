@@ -1,5 +1,7 @@
 <?php
 
+
+//php引入公共文件
 require "conn.php";
 
 

@@ -154,4 +154,47 @@ h6 {
 img {
   vertical-align: top; }
 
+.main {
+  width: 1200px;
+  margin: 0 auto;
+  height: 200px; }
+  .main .shopping-title ul {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 60px;
+    line-height: 60px;
+    background: #ccc; }
+    .main .shopping-title ul .f1 a {
+      border-color: #ff2832;
+      width: 12px;
+      height: 12px;
+      border: 1px solid #bcbcbc;
+      background: url("../img/icon_sprite.png"); }
+  .main .shopping-total {
+    width: 1200px;
+    margin: 0 auto; }
+    .main .shopping-total ul {
+      line-height: 60px;
+      height: 60px;
+      background: #ffffaa;
+      width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+  .main .shopping-list {
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid black;
+    margin: 10px 0; }
+    .main .shopping-list .cartlist {
+      padding: 10px 5px; }
+      .main .shopping-list .cartlist .itemlist .goods-item .goods-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; }
+        .main .shopping-list .cartlist .itemlist .goods-item .goods-info .quantity input {
+          width: 20px; }
+
 /*# sourceMappingURL=cart.css.map */

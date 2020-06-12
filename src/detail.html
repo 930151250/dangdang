@@ -15,7 +15,7 @@
     <div class="commonHeader"></div>
     <!-- 头部结束 -->
     <!-- 详情开始 -->
-    <div class="nsfz">
+    <div class="nsfz" style="position: relative;">
         <a href=""><b>女士服装</b></a>
         <span>></span>
         <a href="">T恤</a>
@@ -23,12 +23,16 @@
         <a href="">初语T恤</a>
         <span>></span>
         <span>【618提前购，秒杀价：26元】初语夏季新品 圆领字母印花宽松ins</span>
+        <div class="gwc" style="position: absolute; right: 5px;">
+            <a href="http://10.31.162.60/dangdang/src/cart.html">购物车</a><span>0</span>
+        </div>
+
     </div>
     <div class="product">
         <!-- 大图开始 -->
         <div class="pic_info">
             <div class="xt">
-                <a href=""><img src="http://img3m9.ddimg.cn/93/16/1111752669-2_u_1.jpg" alt=""></a>
+                <a href=""><img src="http://img3m9.ddimg.cn/93/16/1111752669-2_u_1.jpg" alt="" class="smallpic"></a>
                 <div class="move_b"></div>
             </div>
             <!-- 隐藏的放大镜盒子 -->
@@ -36,8 +40,13 @@
                 <img src="http://img3m9.ddimg.cn/93/16/1111752669-2_u_1.jpg" alt="" class="bigpic">
             </div>
             <!-- 隐藏的放大镜盒子 -->
-            <script src="./js/public2.js"></script>
-            <script>
+            <!-- 小图列表开始 -->
+
+
+            <!-- 小图列表结束 -->
+
+            <!-- <script src="./js/public2.js"></script> -->
+            <!-- <script>
                 $(function() {
                     var movebox = $('.move_b'),
                         bigpic = $('.bigpic'),
@@ -97,10 +106,16 @@
                         big.removeClass('show_1');
                     });
                 });
-            </script>
+            </script> -->
             <!-- 下面的小图列表 -->
-            <div class="xtlist">
+            <div id="ulist">
+                <a href="javascript:;" id="left">&lt;</a>
+                <div id="list">
+                    <ul>
 
+                    </ul>
+                </div>
+                <a href="javascript:;" id="right">&gt;</a>
             </div>
 
             <div class="share">
@@ -129,14 +144,14 @@
                 <div class="lq"><span>领券</span><a href="">满一件 9折</a></div>
                 <div class="buy">
                     <div class="num">
-                        <input type="submit" value="1" class="num_0">
+                        <input type="text" value="1" class="num_0">
                         <div class="num_1">
                             <input type="submit" value="+" class="num_2">
                             <input type="submit" value="-" class="num_3">
                         </div>
                     </div>找到了再开始计时
                     <div class="buy-box">
-                        <a href="" class="jrgwc">
+                        <a href="javaspcript:" class="jrgwc">
                             <i></i>加入购物车
                         </a>
                         <a href="" class="ljgm">
@@ -213,11 +228,13 @@
     <!-- 尾部开始 -->
     <div class="commonFooter"></div>
     <!-- 尾部结束 -->
-    <script src="../../lun_.js"></script>
     <script src="js/jquery.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="../../lun_.js"></script>
+    <script src="js/detail.js"></script>
     <script src="js/head.js"></script>
     <script src="js/foot.js"></script>
-    <script src="js/detail.js"></script>
+
 
 </body>
 
