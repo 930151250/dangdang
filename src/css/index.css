@@ -402,10 +402,12 @@ img {
       z-index: 1000; }
     .main .main-nav .banner {
       width: 796px;
-      height: 326px;
-      border: 1px solid blue;
+      height: 480px;
       float: left;
       position: relative; }
+      .main .main-nav .banner img {
+        display: inline-block;
+        height: 480px; }
       .main .main-nav .banner .left,
       .main .main-nav .banner .right {
         font-size: 100px;
@@ -425,18 +427,24 @@ img {
       right: 0; }
       .main .main-nav .xxgg .xxgg2 {
         width: 202px;
-        height: 173px;
-        border: 1px solid blue; }
+        height: 173px; }
+        .main .main-nav .xxgg .xxgg2 p {
+          line-height: 24px;
+          text-align: center; }
+        .main .main-nav .xxgg .xxgg2 ul li {
+          line-height: 25px;
+          padding-left: 10px;
+          width: 183px;
+          height: 25px;
+          background: url("http://img60.ddimg.cn/upload_img/00111/home/home_sprite_1507.png") no-repeat 10px -188px; }
       .main .main-nav .xxgg .xxgg3 {
         width: 202px;
-        height: 115px;
-        border: 1px solid black; }
+        height: 115px; }
   .main .rybh {
     width: 1200px;
     height: 372px;
     margin: 0 auto;
     overflow: hidden;
-    border: 1px solid #ccc;
     padding-top: 20px; }
     .main .rybh .rybh-top {
       border-bottom: 1px solid #ccc;

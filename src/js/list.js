@@ -9,7 +9,7 @@
     //1.渲染列表页的数据-默认渲染第一页
     const $list = $('.list');
     $.ajax({
-        type: 'get',
+       
         url: 'http://10.31.162.60/dangdang/php/data.php',
         dataType: 'json',
     }).done(function(data) {

@@ -1,87 +1,135 @@
-window.onload = function() {
-    const wsSB = document.getElementById('txt_username');
-    const wsSBSPAN = document.querySelector('.cue');
+! function() {
 
-    const wsSB2 = document.querySelector('.wsSB2');
-    const wsSBSPAN2 = document.querySelector('.wsSBSPAN2');
+    const $phone = $('#txt_username');
+    const $password1 = $('.wsSB2');
+    const $password2 = $('.wsSB3');
+    const $span = $('.cue');
+    const $sub = $('.submit');
 
-    const wsSB3 = document.querySelector('.wsSB3');
-    const wsSBSPAN3 = document.querySelector('.wsSBSPAN3');
-    const wsSB4 = document.querySelector('.wsSB4');
-    const wsSBSPAN4 = document.querySelector('wsSBSPAN4');
-    const sub = document.querySelector('.submit')
-    let flag1 = false;
-    let flag2 = false;
-    let flag3 = false;
 
-    console.log(wsSBSPAN);
-    var n = {};
+    let phoneflag = true;
+    let password1 = true;
+    let password2 = true;
 
-    wsSB.oninput = function(e) {
-        var phoneNumber = /^1(3|4|5|7|8)\d{9}$/;
-        wsSBSPAN.innerHTML = phoneNumber.test(e.target.value) ? '' : '手机号码格式错误';
-        flag1 = phoneNumber.test(e.target.value) ? true : false;
-        n.phoneLu = phoneNumber.test(e.target.value);
-        wsSBSPAN.style.color = 'red'
+    $phone.on('blur', function() {
+        if ($(this).val() !== '') {
+            let regphone = /^1[345678]\d{9}$/;
+            if (regphone.test($(this).val())) {
+                $.ajax({
+                    type: 'post',
+                    url: 'http://10.31.162.60/dangdang/php/register.php',
+                    data: {
+                        phone: $phone.val()
+                    }
+                }).done(function(data) {
+                    // console.log(data.split('')[1])
+                    if (!data.split('')[1]) {
+                        $span.eq(0).html('√').css('color', 'green');
+                        phoneflag = true;
+                    } else {
+                        $span.eq(0).html('改号码已注册').css('color', 'red');
+                        phoneflag = false;
+                    }
+                })
 
-        wsSB2.oninput = function(e) {
-            var password3 = /^.{6,20}$/
-            if (!password3.test(e.target.value)) {
-                wsSBSPAN2.innerHTML = '你输入的密码不正确';
-                flag2 = false;
+
             } else {
-
-                wsSB3.value ? wsSB3.value == e.target.value ? wsSBSPAN2.innerHTML = '' : wsSBSPAN2.innerHTML = '俩次密码不相同' : wsSBSPAN2.innerHTML = '';
-                flag2 = true;
+                $span.eq(0).html('手机号码错误').css('color', 'red');
+                phoneflag = false;
             }
-            n.passNumber = password3.test(e.target.value)
+        } else {
+            $span.eq(0).html('请输入手机号码').css('color', 'red');
+            phoneflag = false;
         }
+    })
 
-        wsSB3.oninput = function(e) {
-            var password3 = /^.{6,20}$/
 
-            if (!password3.test(e.target.value)) {
-                wsSBSPAN3.innerHTML = '你输入的密码不正确';
-                flag3 = false;
-            } else {
-                flag3 = true;
-                wsSB2.value ? wsSB2.value == e.target.value ? wsSBSPAN3.innerHTML = '' : wsSBSPAN3.innerHTML = '俩次密码不相同' : wsSBSPAN3.innerHTML = ''
+    $password1.on('blur', function() {
+        let passcount = $(this).val();
+        if (passcount == '') {
+            $span.eq(1).html('请输入密码').css('color', 'red');
+            password1 = false;
+        }
+    })
+    $password1.on('input', function() {
+        let passcount = $(this).val();
+        if (passcount.length >= 6 && passcount.length <= 20) {
+            let  regnum  =  /\d+/; //一级安全
+                        
+            let  reglow  =  /[a-z]+/; //二级安全
+                        
+            let  regupp  =  /[A-Z]+/; //二级安全
+                        
+            let  regteshu  =  /[\W\_]+/; //三级安全
+                        
+            let  dengji  =  0;
+            if (regnum.test(passcount)) {                 dengji++             }            
+            if (reglow.test(passcount)) {                 dengji++             }            
+            if (regupp.test(passcount)) {                 dengji++             }            
+            if (regteshu.test(passcount)) {                 dengji++             }
+            switch (dengji) {
+                case  1 :
+                       $span.eq(1).html('弱').css("color", "red") ;
+                    password1 = false;                                      
+                    break;                
+                case  2:
+                              
+                case  3 :
+                     $span.eq(1).html('中').css("color", "orange") ;
+                    password1 = true;                                      
+                    break;                
+                case  4 :
+                                        $span.eq(1).html('强').css("color", "green") ;
+                    password1 = true;                                                                           
+                    break;
             }
-            n.passNumber2 = password3.test(e.target.value)
+        } else {
+            $span.eq(1).html('密码长度不符合').css('color', 'red');
+            password1 = false;
         }
-        wsSBSPAN2.style.color = 'red';
-        wsSBSPAN3.style.color = 'red';
+    })
+    $password2.on("blur", function() {
+        if ($password2.val()  !==  "") {
+            if ($password1.val()  === $password2.val()) {
+                $span.eq(2).html('√').css('color',  'green');
+                password2 = true;
+            } else {                
+                $span.eq(2).html('密码错误').css('color',  'red'); 
+                password2 = false;                     
+            }        
+        } else {            
+            $span.eq(2).html('请输入密码').css('color',  'red'); 
+            password2 = false;                  
+        }    
+    })
+    $sub.on('click', function() {
 
-
-        // wsSB4.oninput = function(e) {
-        //     var email = /^(\w+[\+\-\.]*\w+)\@(\w+[\-\.]*\w+)\.(\w+[\-\.]*\w+)$/;
-        //     if (!email.test(e.target.value)) {
-        //         wsSBSPAN4.innerHTML = '你输入的邮箱有误'
-        //     } else {
-        //         wsSBSPAN4.innerHTML = '√'
-        //     }
-        // }
-    }
-
-    sub.onclick = function(e) {
-        let val1 = wsSB.value;
-        let val2 = wsSB2.value;
-
-
-        if (flag1 && flag2 && flag3) {
+        if ($phone.val() === "") {
+            $span.eq(0).html('电话号码不能为空').css('color', 'red');
+            phoneflag = false;
+        }
+        if ($password1.val() === "") {
+            $span.eq(1).html('密码不能为空').css('color', 'red');
+            password1 = false;
+        }
+        if ($password2.val() === "") {
+            $span.eq(2).html('密码不能为空').css('color', 'red');
+            password2 = false;
+        }
+        console.log(phoneflag, password1, password2)
+        if (phoneflag && password1 && password2) {
+            console.log($phone.val(), $password1.val())
             $.ajax({
-                type: 'POST',
-                url: 'http://10.31.162.60/dangdang/php/login.php',
+                type: 'post',
+                url: 'http://10.31.162.60/dangdang/php/register.php',
                 data: {
-                    phone: val1,
-                    password: val2,
-                    submit: 1
-
-                },
-                success: function(data) {
-                    console.log(data)
+                    phone: $phone.val(),
+                    password: $password1.val()
                 }
+            }).done(function(data) {
+
             })
+
         }
-    }
-}
+    })
+}()

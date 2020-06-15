@@ -314,10 +314,14 @@
         }
         .banner {
             width: 796px;
-            height: 326px;
-            border: 1px solid blue;
+            height: 480px;
+            //border: 1px solid blue;
             float: left;
             position: relative;
+            img {
+                display: inline-block;
+                height: 480px;
+            }
             .left,
             .right {
                 font-size: 100px;
@@ -342,12 +346,25 @@
             .xxgg2 {
                 width: 202px;
                 height: 173px;
-                border: 1px solid blue;
+                // border: 1px solid blue;
+                p {
+                    line-height: 24px;
+                    text-align: center;
+                }
+                ul {
+                    li {
+                        line-height: 25px;
+                        padding-left: 10px;
+                        width: 183px;
+                        height: 25px;
+                        background: url('http://img60.ddimg.cn/upload_img/00111/home/home_sprite_1507.png') no-repeat 10px -188px;
+                    }
+                }
             }
             .xxgg3 {
                 width: 202px;
                 height: 115px;
-                border: 1px solid black;
+                //border: 1px solid black;
             }
         }
     }
@@ -357,7 +374,7 @@
         height: 372px;
         margin: 0 auto;
         overflow: hidden;
-        border: 1px solid #ccc;
+        //border: 1px solid #ccc;
         padding-top: 20px;
         .rybh-top {
             border-bottom: 1px solid #ccc;

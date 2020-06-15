@@ -1,8 +1,21 @@
 <?php
 include "conn.php";
 $conn->query('SET NAMES UTF8');
-if(isset($_GET['sid'])){
-    $sid=$_GET['sid'];
-    $resule=$conn->query("select * from user where sie=$sid");
-    echo json_encode($result->fetch_assoc());
+//验证账号不能重复
+if(isset($_POST['phone'])){
+    $phone=$_POST['phone'];
+    $result=$conn->query("select * from user where phone='$phone'");
+    if($result->fetch_assoc()){
+        echo true;
+    }else{
+        echo false;
+    }
 }
+if(isset($_POST['password'])){
+    $password = $_POST['password'];
+    $phone=$_POST['phone'];
+    echo $phone.$password;
+    $conn->query("insert user values(null,'$phone','$password')");
+}
+
+
